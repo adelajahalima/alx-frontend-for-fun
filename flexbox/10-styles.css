@@ -358,7 +358,7 @@
       ============================= */
   
   .section-hero {
-    position: absolute;
+    position: relative;
     margin-top: -8.5rem;
   }
   .section-hero .section-body {
