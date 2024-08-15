@@ -278,13 +278,13 @@
   /* Post
     ============================= */
 
-    .main-article .post {
+    .post {
         display: flex;
     }
-    .main-article .post .post-content {
+    .post-content {
         width: 100%;
     }
-    .main-article .post aside .post-aside {
+    .post-aside {
         order: -1;
         min-width: 20%;
     }
