@@ -1,0 +1,50 @@
+/* General reset */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    width: 30%;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px 20px; 
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 32px;
+    background-image: url('0-sprite.png'); 
+    background-color: #F7F7F7;
+    background-repeat: no-repeat;
+    background-size: auto 350px;
+    background-position: left bottom;
+    width: 265px; 
+    height: 400px;
+    /* padding-top: 40px; */
+
+}
+
+.icon {
+    display: block;
+    margin: 0 auto;
+    
+    
+    
+}
+
+/* Specific icon positioning */
+.i-html {
+    background-position: 0 0; /* Adjust to show the HTML part of the sprite */
+    
+}
+
+li:has(.i-css) {
+    background-position: -265px bottom; /* Adjust to show the CSS part of the sprite */
+}
+
+li:has(.i-js) {
+    background-position: -535px bottom; /* Adjust to show the JS part of the sprite */
+}
