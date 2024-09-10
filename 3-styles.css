@@ -1,0 +1,118 @@
+/* Hide the default checkbox */
+.menu-open {
+    display: none;
+}
+/* Hamburger button container */
+.menu-open-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #A31D3C;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 1.5s infinite ease-in-out;
+    padding: 0; /* Remove any extra padding */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Lines of the hamburger icon */
+.menu-line {
+    width: 35px;
+    height: 4px;  /* Slightly thinner lines */
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    margin: 4px 0; /* Adjust spacing between lines */
+}
+
+/* When the menu is open, turn hamburger into X */
+.menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(50deg) translate(8px, 10px);
+    width: 20px;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    opacity: 0; /* Hide the middle line */
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: rotate(-50deg) translate(8px, -10px);
+    width: 20px;
+}
+
+/* Menu items (as before) */
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #A31D3C;
+    color: white;
+    position: absolute;
+    transition: all 0.3s ease-in-out, background-color 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Position the menu items (same as before) */
+.menu-item:nth-child(2) {
+    top: 80px;
+    left: 0;
+}
+.menu-item:nth-child(3) {
+    top: 150px;
+    left: 0;
+}
+.menu-item:nth-child(4) {
+    top: 220px;
+    left: 0;
+}
+.menu-item:nth-child(5) {
+    top: 290px;
+    left: 0;
+}
+.menu-item:nth-child(6) {
+    top: 360px;
+    left: 0;
+}
+
+/* Menu items appear when menu is open */
+.menu-open:checked ~ .menu-item {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Menu item background color changes when clicked */
+.menu-open:checked ~ .menu-item {
+    background-color: white;
+    color: #A31D3C;
+    transform: translateY(0);
+}
+
+/* Transition for dropdown effect */
+.menu-item {
+    transform: translateY(-100%);
+}
+
+/* Hover effect */
+.menu-item:hover {
+    background-color: #A31D3C;
+    color: white;
+    transform: scale(1.1);
+}
