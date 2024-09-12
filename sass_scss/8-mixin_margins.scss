@@ -1,0 +1,13 @@
+/* My style */
+@mixin margin-lr($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+body {
+  @include margin-lr(10px, 10px);
+}
+
+div {
+  @include margin-lr(15px, 15px);
+}
